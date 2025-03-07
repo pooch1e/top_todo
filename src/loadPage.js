@@ -1,9 +1,9 @@
-//loadpage.js
-import createCard from "./card";
+// loadpage.js
+import Card from "./card";
+
 const loadPage = () => {
   // createPage();
-  createCard();
-  
-};
+  const card = new Card("F", "Foo", "Developer", "Test project card");
+
 
 export default loadPage;
