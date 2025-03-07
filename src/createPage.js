@@ -1,8 +1,8 @@
-//init.js
-//create page
+//create page.js
+//create page when loading website
 
 const createPage = () => {
-  const content = document.querySelector(".content");
+  const content = document.querySelector("#content");
 
 }
 
