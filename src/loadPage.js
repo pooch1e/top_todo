@@ -3,8 +3,10 @@ import Card from "./card";
 
 const loadPage = () => {
   // createPage();
-  const myCard = new Card("F", "Foo", "Developer", "lor");
-  console.log(myCard.createCard());
+  const myCard = new Card("F", "Foo", "Developer", "lorem test test");
+  console.log(myCard.createCard()); //debug card is being made
+  
+  
 
 };
 export default loadPage;
