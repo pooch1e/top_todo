@@ -13,11 +13,11 @@ body {
   gap: 0px;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 480px;
+  height: 100px;
   position: relative;
 }
 .content {
-  border-radius: 12px;
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
   gap: 0px;
