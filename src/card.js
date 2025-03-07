@@ -1,6 +1,9 @@
 //card.js
 //using bootstrap for styling
 //refractured with AI help (to include bootstrap)
+// card.js
+// using bootstrap for styling
+// refactored with AI help (to include bootstrap)
 class Card {
   constructor(initial = "A", title = "Title", subtitle = "Subtitle", supportingText = "Supporting Text") {
     this.initial = initial;
@@ -20,25 +23,10 @@ class Card {
     return element;
   }
 
-  createEditableElement(tag, className, value, onInputCallback) {
-    const input = document.createElement(tag);
-    input.classList.add(className);
-    input.value = value;
-    
-    input.addEventListener("input", (e) => {
-      onInputCallback(e.target.value);
-    });
-
-    return input;
-  }
-
   createAvatar() {
     const avatar = this.createElement("div", "avatar");
     const background = this.createElement("div", "background");
-    const initial = this.createEditableElement("input", "initial-input", this.initial, (val) => {
-      this.initial = val;
-    });
-
+    const initial = this.createElement("div", "initial", this.initial);
     avatar.append(background, initial);
     return avatar;
   }
@@ -49,13 +37,8 @@ class Card {
     const avatar = this.createAvatar();
     
     const text = this.createElement("div", "text");
-    const header2 = this.createEditableElement("input", "header2", this.title, (val) => {
-      this.title = val;
-    });
-
-    const subhead = this.createEditableElement("input", "subhead", this.subtitle, (val) => {
-      this.subtitle = val;
-    });
+    const header2 = this.createElement("div", "header2", this.title);
+    const subhead = this.createElement("div", "subhead", this.subtitle);
 
     text.append(header2, subhead);
     content2.append(avatar, text);
@@ -75,20 +58,11 @@ class Card {
   createTextContent() {
     const cardBody = this.createElement("div", "card-body");
     const headline = this.createElement("div", "headline");
-
-    const title = this.createEditableElement("input", "title", this.title, (val) => {
-      this.title = val;
-    });
-
-    const subhead2 = this.createEditableElement("input", "subhead2", this.subtitle, (val) => {
-      this.subtitle = val;
-    });
-
+    const title = this.createElement("div", "title", this.title);
+    const subhead2 = this.createElement("div", "subhead2", this.subtitle);
     headline.append(title, subhead2);
 
-    const supportingText = this.createEditableElement("textarea", "supporting-text", this.supportingText, (val) => {
-      this.supportingText = val;
-    });
+    const supportingText = this.createElement("div", "supporting-text", this.supportingText);
 
     cardBody.append(headline, supportingText, this.createActions());
     return cardBody;

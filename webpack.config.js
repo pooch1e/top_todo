@@ -1,4 +1,3 @@
-// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -28,6 +27,24 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.(scss)$/i,
+        use: [
+          "style-loader", // Injects styles into the DOM
+          "css-loader", // Turns CSS into commonjs
+          "sass-loader", // Compiles Sass to CSS
+          {
+            loader: "postcss-loader", // Post-processing CSS
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require("autoprefixer"), // Adds vendor prefixes
+                ],
+              },
+            },
+          },
+        ],
       },
     ],
   },
