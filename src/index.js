@@ -6,5 +6,6 @@ import loadPage from "./loadpage";
 import "./styles.css";
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadPage();
+  console.log("page load working");
+  console.log(loadPage());
 });

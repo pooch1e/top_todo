@@ -3,7 +3,8 @@ import Card from "./card";
 
 const loadPage = () => {
   // createPage();
-  const card = new Card("F", "Foo", "Developer", "Test project card");
+  const myCard = new Card("F", "Foo", "Developer", "lor");
+  console.log(myCard.createCard());
 
-
+};
 export default loadPage;
