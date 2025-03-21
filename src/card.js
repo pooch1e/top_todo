@@ -1,6 +1,4 @@
-//card.js
-//using bootstrap for styling
-//refractured with AI help (to include bootstrap)
+
 // card.js
 // using bootstrap for styling
 // refactored with AI help (to include bootstrap)
@@ -104,4 +102,4 @@ class Card {
   }
 }
 
-export default Card;
+// export default Card;

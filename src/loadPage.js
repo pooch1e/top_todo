@@ -1,11 +1,11 @@
 // loadpage.js
-import Card from "./card";
+import card2 from "./card2";
 
 const loadPage = () => {
   // createPage();
-  const myCard = new Card("F", "Foo", "Developer", "lorem test test");
 
-  console.log(myCard.createCard()); //debug card is being made
-
+card2.addDiv();
+card2.addP();
+card2.addText();
 };
 export default loadPage;
